@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Studio Poster — Your Vision. Our Canvas.</title>
+<style>
+:root{--navy:#0B1F4D;--royal:#2563EB;--sky:#38BDF8;--bg:#F4F8FF;--card:#fff;--tx:#172033;--mut:#52607a;--line:#dbe5f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#081232;--card:#0f1d45;--tx:#eaf0ff;--mut:#a9b8d8;--line:#223463}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--tx);line-height:1.55}
+h1,h2,h3{font-family:Poppins,"Segoe UI",system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+.w{max-width:1100px;margin:auto;padding:0 20px}section{padding:72px 0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);transition:box-shadow .3s}
+nav.s{box-shadow:0 4px 24px #0b1f4d22}nav .w{display:flex;align-items:center;gap:18px;height:64px}
+.logo{font-weight:800;font-size:19px;display:flex;gap:8px;align-items:center;color:var(--tx);text-decoration:none;margin-right:auto}
+.logo i{width:24px;height:28px;border:3px solid var(--royal);border-radius:4px;position:relative}.logo i:after{content:"";position:absolute;inset:3px 3px 8px;background:linear-gradient(135deg,var(--sky),var(--royal));border-radius:2px}
+nav a.l{color:var(--tx);text-decoration:none;font-size:15px}nav a.l:hover{color:var(--royal)}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 24px;font:600 15px inherit;font-family:inherit;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--royal),#1d4ed8);box-shadow:0 8px 24px #2563eb44;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}.btn.o{background:transparent;color:var(--royal);border:2px solid var(--royal);box-shadow:none}.btn.g{background:#16a34a}
+.btn:disabled,.btn[aria-disabled=true]{opacity:.5;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+#bg{display:none;background:none;border:0;font-size:26px;color:var(--tx)}
+.hero{background:radial-gradient(900px 500px at 80% 0,#38bdf855,transparent),linear-gradient(160deg,#0B1F4D,#17358a);color:#fff;padding:80px 0 90px;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}.hero h1{font-size:clamp(34px,5vw,58px)}.hero p{color:#cfe0ff;max-width:520px}
+.tag{color:var(--sky);font-weight:600;letter-spacing:.06em}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.hero .btn.o{color:#fff;border-color:#fff}
+.mock{position:relative;height:380px}.mock div{position:absolute;border-radius:6px;box-shadow:0 20px 50px #0008;animation:fl 6s ease-in-out infinite}
+.p1{width:170px;height:240px;left:8%;top:20px;background:linear-gradient(160deg,#38BDF8,#2563EB 60%,#0B1F4D);border:8px solid #fff}
+.p2{width:140px;height:190px;right:6%;top:0;background:linear-gradient(200deg,#fbbf24,#fb7185 55%,#7c3aed);border:8px solid #fff;animation-delay:-2s!important}
+.p3{width:150px;height:175px;left:34%;bottom:10px;background:#fff;padding:10px 10px 38px;transform:rotate(-6deg);animation-delay:-4s!important}
+.p3:before{content:"";display:block;height:100%;background:linear-gradient(135deg,#a5f3fc,#6366f1)}
+@keyframes fl{50%{translate:0 -14px}}.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}}
+.ban{background:#fff7ed;color:#9a3412;border:1px solid #fdba74;border-radius:12px;padding:12px 16px;font-weight:600;margin:18px 0}
+@media(prefers-color-scheme:dark){.ban{background:#3a1d0a;color:#fdba74}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 6px 24px #0b1f4d12;transition:transform .25s,box-shadow .25s}
+.pc:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 16px 40px #2563eb33}
+.art{height:120px;border-radius:8px;margin-bottom:12px;background:linear-gradient(135deg,var(--sky),var(--royal));border:5px solid var(--card);outline:1px solid var(--line)}
+.art.pol{border-bottom-width:22px;background:linear-gradient(135deg,#a5f3fc,#818cf8)}
+.pr{font-size:26px;font-weight:800;color:var(--royal)}.mut{color:var(--mut);font-size:14px}
+h2{font-size:clamp(26px,4vw,38px)}.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.steps .card:before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--royal);color:#fff;font-weight:700;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
+#order .box{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:start}
+.prog{display:flex;gap:6px;margin-bottom:18px}.prog b{flex:1;height:6px;border-radius:4px;background:var(--line);transition:.4s}.prog b.on{background:linear-gradient(90deg,var(--royal),var(--sky))}
+label{display:block;font-size:14px;font-weight:600;margin:10px 0}input,select,textarea{width:100%;margin-top:4px;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--tx);font:inherit}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.row{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.seg{display:flex;gap:8px}.seg button{flex:1;padding:10px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--tx);font-weight:600;cursor:pointer}.seg button.on{border-color:var(--royal);background:#2563eb22}
+.dz{border:2px dashed var(--royal);border-radius:16px;padding:28px;text-align:center;cursor:pointer}.dz.d{background:#2563eb1a}
+.th{display:flex;gap:10px;align-items:center;padding:8px 0}.th img{width:64px;height:64px;object-fit:cover;border-radius:8px;animation:pop .3s}@keyframes pop{from{scale:.6;opacity:0}}
+.err{color:#dc2626;font-weight:600;margin:8px 0}.nav2{display:flex;justify-content:space-between;margin-top:18px}
+.tot{font-size:22px;font-weight:800}.sm{position:sticky;top:80px}details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}summary{cursor:pointer;font-weight:600}
+footer{background:var(--navy);color:#cfe0ff;padding:36px 0;text-align:center}footer a{color:var(--sky)}
+@media(max-width:820px){.hero .w,#order .box{grid-template-columns:1fr}.mock{height:300px}.sm{position:static}.two{grid-template-columns:1fr}
+nav a.l{display:none}#bg{display:block}nav.o a.l{display:block;position:absolute;left:0;right:0;background:var(--bg);padding:14px 20px;top:64px;border-bottom:1px solid var(--line)}nav.o a.l:nth-of-type(n){position:static}nav.o .w{flex-wrap:wrap;height:auto;padding-bottom:10px}}
+</style></head><body>
+<nav id="nv"><div class="w"><a class="logo" href="#home"><i></i>Studio Poster</a>
+<a class="l" href="#posters">Posters</a><a class="l" href="#polaroids">Polaroids</a><a class="l" href="#how">How It Works</a><a class="l" href="#pricing">Pricing</a><a class="l" href="#contact">Contact</a>
+<a class="btn" href="#order">Order Now</a><button id="bg" aria-label="Menu">☰</button></div></nav>
+<header class="hero" id="home"><div class="w"><div><div class="tag">“Your Vision. Our Canvas.”</div><h1>Turn Your Moments Into Masterpieces.</h1>
+<p>Your favorite memories deserve more than a screen. Turn your photos, creative ideas, and special moments into beautiful custom posters and Polaroids with Studio Poster.</p>
+<div class="cta"><a class="btn" href="#order">Create Your Order</a><a class="btn o" href="#posters">Explore Our Collection</a></div></div>
+<div class="mock" aria-hidden="true"><div class="p1"></div><div class="p2"></div><div class="p3"></div></div></div></header>
+<section id="posters"><div class="w rv"><h2>Posters</h2><p class="mut">Make it yours. Custom sizes and personalized designs are available! Prices are per poster.</p><div class="grid" id="pg"></div></div></section>
+<section id="polaroids" style="background:var(--card)"><div class="w rv"><h2>Polaroids</h2><p class="mut">Your favorite memories, printed beautifully. Custom sizes and personalization are available! Prices are per print.</p><div class="grid" id="lg"></div></div></section>
+<section id="how"><div class="w rv"><h2>How It Works</h2><div class="steps">
+<div class="card">Choose your posters or Polaroids.</div><div class="card">Select your preferred size and quantity.</div><div class="card">Upload your photos and add customization instructions.</div><div class="card">Enter your contact and delivery details.</div><div class="card">Review your order and send it through WhatsApp.</div></div>
+<p class="mut">Studio Poster will then review your order and share confirmation and payment instructions.</p></div></section>
+<section id="pricing" style="background:var(--card)"><div class="w rv"><h2>Pricing &amp; Why Studio Poster</h2>
+<div class="ban">🔒 PREPAID ORDERS ONLY — Cash on Delivery is not available.</div>
+<div class="chips"><span>Personalized options</span><span>Multiple sizes</span><span>Custom dimensions on request</span><span>Easy online ordering</span><span>Direct WhatsApp communication</span><span>Transparent listed prices</span><span>Clear delivery charges</span><span>Prepaid workflow</span></div>
+<p>Delivery: <b>₹50</b> within Tamil Nadu, <b>₹80</b> outside Tamil Nadu — charged once per order.</p></div></section>
+<section id="order"><div class="w"><h2>Create Your Order</h2><div class="box"><div class="card"><div class="prog" id="pr"></div><div id="st"></div></div><aside class="card sm" id="sum"></aside></div></div></section>
+<section style="background:var(--card)"><div class="w rv"><h2>FAQ</h2>
+<details><summary>What poster sizes are available?</summary><p>A6 is ₹19, A5 is ₹29, A4 is ₹45, and A3 is ₹79 per poster. Custom sizes are available with a quotation.</p></details>
+<details><summary>What Polaroid sizes are available?</summary><p>2.5 × 3 inches costs ₹15, 3 × 4 inches costs ₹20, and 6 × 6 inches costs ₹25 per print. Custom sizes are available with a quotation.</p></details>
+<details><summary>How much is delivery?</summary><p>Delivery costs ₹50 within Tamil Nadu. Delivery outside Tamil Nadu costs ₹80, including the additional ₹30 charge.</p></details>
+<details><summary>Is Cash on Delivery available?</summary><p>No. Studio Poster accepts prepaid orders only.</p></details>
+<details><summary>How do I send my photos?</summary><p>Select your photos in the order form. They are only previewed in your browser, so attach the original image files to your WhatsApp order message.</p></details>
+<details><summary>Can I customize the design?</summary><p>Yes. Specify custom sizes and your preferred colors, text, and design instructions. Final custom pricing is confirmed by the business.</p></details>
+<details><summary>How is my order confirmed?</summary><p>After you submit your order through WhatsApp, Studio Poster will review the details and provide confirmation and payment instructions.</p></details></div></section>
+<section id="contact"><div class="w rv"><h2>Contact</h2><p><b>Studio Poster</b> · Contact person: Imalash<br>WhatsApp: <span id="c1"></span> · Email: <span id="c2"></span><br>Instagram handle supplied: <code>*.studio_poster.*</code></p>
+<div class="cta"><a class="btn g" id="cw" target="_blank" rel="noopener">WhatsApp Us</a><a class="btn o" id="ce">Email Us</a><a class="btn o" id="ci">Follow Studio Poster</a></div>
+<p class="mut" id="cn"></p></div></section>
+<footer><b>Studio Poster</b> — “Your Vision. Our Canvas.”<br><span id="ft"></span></footer>
+<script>
+// ===== Business configuration (edit here only) =====
+const CFG={name:'Studio Poster',owner:'Imalash',wa:'917708739778',waShow:'+91 7708739778',email:'studioposter15@gmail.com',
+insta:'', // set the confirmed Instagram profile URL here; leave empty until the owner confirms the exact username
+payInfo:'', // optional payment instructions text; if empty, the business shares them on WhatsApp
+delTN:50,delOther:80,maxMB:10,types:['image/jpeg','image/png','image/webp'],maxQty:500,
+cat:{poster:{label:'Poster',sizes:[['A6',19],['A5',29],['A4',45],['A3',79],['Custom size',null]]},
+polaroid:{label:'Polaroid',sizes:[['2.5 × 3 inches',15],['3 × 4 inches',20],['6 × 6 inches',25],['Custom size',null]]}}};
+const STATES='Andhra Pradesh,Arunachal Pradesh,Assam,Bihar,Chhattisgarh,Goa,Gujarat,Haryana,Himachal Pradesh,Jharkhand,Karnataka,Kerala,Madhya Pradesh,Maharashtra,Manipur,Meghalaya,Mizoram,Nagaland,Odisha,Punjab,Rajasthan,Sikkim,Tamil Nadu,Telangana,Tripura,Uttar Pradesh,Uttarakhand,West Bengal,Andaman and Nicobar Islands,Chandigarh,Dadra and Nagar Haveli and Daman and Diu,Delhi,Jammu and Kashmir,Ladakh,Lakshadweep,Puducherry'.split(',');
+const $=s=>document.querySelector(s),fmt=n=>'₹'+n.toLocaleString('en-IN'),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const S={step:0,items:[],f:{},files:[],err:'',sent:false,pick:{cat:'poster',size:'A4',qty:1,w:'',h:'',u:'inches'}};
+const NAMES=['Products','Details','Photos','Design','Review'];
+const price=i=>CFG.cat[i.cat].sizes.find(x=>x[0]===i.size)[1];
+const label=i=>CFG.cat[i.cat].label+' · '+(i.size==='Custom size'?`Custom ${i.w||'?'} × ${i.h||'?'} ${i.u}`:i.size);
+function tot(){let sub=0,pend=false;S.items.forEach(i=>{const p=price(i);p===null?pend=true:sub+=p*i.qty});
+const d=S.f.state?(S.f.state==='Tamil Nadu'?CFG.delTN:CFG.delOther):null;return{sub,pend,d,total:(!pend&&d!==null)?sub+d:null}}
+// product cards
+for(const [c,id] of [['poster','pg'],['polaroid','lg']])$('#'+id).innerHTML=CFG.cat[c].sizes.map(([s,p])=>`<div class="card pc"><div class="art ${c==='polaroid'?'pol':''}"></div><h3>${esc(s)}</h3><div class="pr">${p===null?'Custom quotation':fmt(p)}</div><p class="mut">${p===null?'Price confirmed by Studio Poster':'per '+(c==='poster'?'poster':'print')}</p><button class="btn o" data-a="pick" data-c="${c}" data-s="${esc(s)}">${c==='poster'?'Customize Poster':'Customize Polaroids'}</button></div>`).join('');
+// contact
+$('#c1').textContent=CFG.waShow;$('#c2').textContent=CFG.email;$('#cw').href='https://wa.me/'+CFG.wa;$('#ce').href='mailto:'+CFG.email;
+if(CFG.insta){$('#ci').href=CFG.insta;$('#ci').target='_blank';$('#ci').rel='noopener'}else{$('#ci').setAttribute('aria-disabled','true');$('#cn').textContent='The Instagram link will be enabled once the owner confirms the exact public username.'}
+$('#ft').innerHTML=`${esc(CFG.waShow)} · ${esc(CFG.email)} · Contact: ${esc(CFG.owner)}`;
+// nav
+addEventListener('scroll',()=>$('#nv').classList.toggle('s',scrollY>10));$('#bg').onclick=()=>$('#nv').classList.toggle('o');
+document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>$('#nv').classList.remove('o'));
+new IntersectionObserver((e,o)=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');o.unobserve(x.target)}}),{threshold:.1}).observe&&document.querySelectorAll('.rv').forEach(el=>{new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){el.classList.add('in');o.disconnect()}},{threshold:.1}).observe(el)});
+const F=(n,l,t='text',r)=>`<label>${l}${r?' *':''}<input data-f="${n}" type="${t}" value="${esc(S.f[n])}" ${t==='tel'?'inputmode="tel"':''} ${t==='number'?'min="1"':''}></label>`;
+function render(){
+$('#pr').innerHTML=NAMES.map((n,i)=>`<b class="${i<=S.step?'on':''}" title="${n}"></b>`).join('');
+const p=S.pick,sz=CFG.cat[p.cat].sizes;let h=`<h3>${S.step+1}. ${NAMES[S.step]}</h3>`;
+if(S.step===0){h+=`<div class="seg">${Object.keys(CFG.cat).map(c=>`<button class="${p.cat===c?'on':''}" data-a="cat" data-c="${c}">${CFG.cat[c].label}s</button>`).join('')}</div>
+<label>Size<select id="psz">${sz.map(([s,pp])=>`<option ${s===p.size?'selected':''} value="${esc(s)}">${esc(s)} — ${pp===null?'custom quotation':fmt(pp)}</option>`).join('')}</select></label>
+${p.size==='Custom size'?`<div class="two"><label>Width<input id="pw" type="number" min="0" value="${esc(p.w)}"></label><label>Height<input id="ph" type="number" min="0" value="${esc(p.h)}"></label></div><label>Unit<select id="pu">${['inches','cm','mm'].map(u=>`<option ${u===p.u?'selected':''}>${u}</option>`).join('')}</select></label><p class="mut">Price confirmed by Studio Poster.</p>`:''}
+<label>Quantity<input id="pq" type="number" min="1" max="${CFG.maxQty}" value="${p.qty}"></label><button class="btn" data-a="add">Add to order</button>
+<div style="margin-top:16px">${S.items.map((i,k)=>`<div class="row"><span>${esc(label(i))}</span><span><button class="btn o" style="padding:4px 12px" data-a="dq" data-k="${k}" aria-label="Decrease">−</button> ${i.qty} <button class="btn o" style="padding:4px 12px" data-a="iq" data-k="${k}" aria-label="Increase">+</button> <button class="btn o" style="padding:4px 12px" data-a="rm" data-k="${k}">Remove</button></span></div>`).join('')||'<p class="mut">No items yet.</p>'}</div>`}
+if(S.step===1)h+=`<div class="two">${F('name','Full name','text',1)}${F('phone','Contact number','tel',1)}${F('wa','WhatsApp number (if different)','tel')}${F('mail','Email (optional)','email')}</div><h3>Delivery address</h3><div class="two">${F('house','House no. / building','text',1)}${F('street','Street','text',1)}${F('area','Area / village','text',1)}${F('city','Town / city','text',1)}${F('district','District','text',1)}${F('pin','PIN code','tel',1)}</div>
+<label>State / UT *<select data-f="state"><option value="">Select…</option>${STATES.map(s=>`<option ${S.f.state===s?'selected':''}>${s}</option>`).join('')}</select></label>${F('land','Landmark / delivery instructions (optional)')}`;
+if(S.step===2){h+=`<div class="dz" id="dz" tabindex="0" role="button">📷 Drag &amp; drop images here or tap to choose<br><span class="mut">JPG, PNG, WebP · up to ${CFG.maxMB} MB each · multiple allowed</span></div><input id="fi" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+<p class="mut">Photos are previewed only on your device and are not uploaded or stored. Please attach the original images in WhatsApp before sending.</p>
+${S.files.map((x,k)=>`<div class="th"><img src="${x.url}" alt=""><div style="flex:1"><div>${esc(x.f.name)}</div><select data-k="${k}" class="asg"><option value="">Design reference</option>${S.items.map((i,j)=>`<option value="${j}" ${x.to==j&&x.to!==''?'selected':''}>For item ${j+1}: ${esc(label(i))}</option>`).join('')}</select></div><button class="btn o" style="padding:6px 14px" data-a="rf" data-k="${k}">Remove</button></div>`).join('')}`}
+if(S.step===3)h+=`<label>Text on poster / Polaroid<input data-f="text" value="${esc(S.f.text)}"></label><div class="two">${F('colors','Preferred colors')}${F('style','Design style')}</div><label>Required delivery date (optional)<input data-f="date" type="date" value="${esc(S.f.date)}"></label>
+<label>Details &amp; special instructions<textarea data-f="notes" rows="6" placeholder="Tell us how you want your posters or Polaroids to look. Describe your design, colors, text, layout, or any special instructions...">${esc(S.f.notes)}</textarea></label><p class="mut">All fields here are optional.</p>`;
+if(S.step===4){const t=tot();h+=`<div class="ban">🔒 PREPAID ORDERS ONLY — Cash on Delivery is not available.</div>
+<p><b>Items</b> <button class="btn o" style="padding:2px 12px" data-a="go" data-k="0">Edit</button><br>${S.items.map((i,k)=>`${k+1}. ${esc(label(i))} × ${i.qty}`).join('<br>')}</p>
+<p><b>Customer</b> <button class="btn o" style="padding:2px 12px" data-a="go" data-k="1">Edit</button><br>${esc(S.f.name)} · ${esc(S.f.phone)}${S.f.wa?' · WA '+esc(S.f.wa):''}<br>${esc(addr())}</p>
+<p><b>Photos</b> <button class="btn o" style="padding:2px 12px" data-a="go" data-k="2">Edit</button><br>${S.files.map(x=>`<img src="${x.url}" alt="" style="width:48px;height:48px;object-fit:cover;border-radius:6px"> `).join('')||'None added'}</p>
+<p><b>Design notes</b> <button class="btn o" style="padding:2px 12px" data-a="go" data-k="3">Edit</button><br>${esc(notes())||'None'}</p>
+${CFG.payInfo?`<p><b>Payment instructions</b><br>${esc(CFG.payInfo)}</p>`:'<p class="mut">Studio Poster will share payment instructions and confirm your order on WhatsApp.</p>'}
+<label style="font-weight:400"><input type="checkbox" id="ck" style="width:auto" ${S.ok?'checked':''}> I confirm that my order details and delivery address are correct. I understand that Studio Poster accepts prepaid orders only and that my order must be confirmed by the business.</label>
+<p class="mut">Privacy: your details and photos are used only to process this order with Studio Poster.</p>${S.sent?`<div class="ban" style="background:#eff6ff;color:#1e3a8a;border-color:#93c5fd">WhatsApp is ready with your order details. Please press Send in WhatsApp to submit your order. Attach your original images before sending. If WhatsApp did not open, contact ${esc(CFG.waShow)}.</div>`:''}`}
+h+=`<div class="err" role="alert">${esc(S.err)}</div><div class="nav2">${S.step?'<button class="btn o" data-a="back">Back</button>':'<span></span>'}${S.step<4?'<button class="btn" data-a="next">Next</button>':'<button class="btn g" data-a="wa">Send Order via WhatsApp</button>'}</div>`;
+$('#st').innerHTML=h;sum()}
+function sum(){const t=tot();$('#sum').innerHTML=`<h3>Order summary</h3>${S.items.map(i=>`<div class="row"><span>${esc(label(i))} × ${i.qty}</span><span>${price(i)===null?'Quote':fmt(price(i)*i.qty)}</span></div>`).join('')||'<p class="mut">Nothing added yet.</p>'}
+<div class="row"><span>Product subtotal</span><b>${fmt(t.sub)}${t.pend?' + custom':''}</b></div><div class="row"><span>Delivery</span><b>${t.d===null?'Select state':fmt(t.d)}</b></div>
+<div class="row tot"><span>Total payable</span><span>${t.total!==null?fmt(t.total):'Pending'}</span></div>${t.pend?'<p class="mut">Custom-size price pending quotation — total is not final.</p>':''}
+<div class="ban" style="font-size:13px">🔒 PREPAID ORDERS ONLY — Cash on Delivery is not available.</div><p class="mut" style="font-size:12px">Final confirmation of custom sizes, artwork requirements, and any additional charges will be provided by Studio Poster before payment.</p>`}
+const addr=()=>[S.f.house,S.f.street,S.f.area,S.f.city,S.f.district,S.f.state,S.f.pin].filter(Boolean).join(', ');
+const notes=()=>['text','colors','style','date','notes'].filter(k=>S.f[k]).map(k=>k+': '+S.f[k]).join('; ');
+function valid(n){const f=S.f,ph=v=>/^[6-9]\d{9}$/.test((v||'').replace(/[\s-]/g,'').replace(/^(\+91|0)/,''));
+if(n===0&&!S.items.length)return'Please add at least one item.';
+if(n===0){const bad=S.items.find(i=>i.size==='Custom size'&&!(+i.w>0&&+i.h>0));if(bad)return'Enter width and height for custom sizes.'}
+if(n===1){for(const[k,l]of[['name','full name'],['phone','contact number'],['house','house / building'],['street','street'],['area','area / village'],['city','town / city'],['district','district'],['state','state']])if(!(f[k]||'').trim())return'Please enter your '+l+'.';
+if(!ph(f.phone))return'Enter a valid 10-digit Indian mobile number.';if(f.wa&&!ph(f.wa))return'WhatsApp number looks invalid.';
+if(!/^\d{6}$/.test(f.pin||''))return'PIN code must be 6 digits.';if(f.mail&&!/^\S+@\S+\.\S+$/.test(f.mail))return'Email looks invalid.'}
+return''}
+function addFiles(l){const e=[];[...l].forEach(x=>{if(!CFG.types.includes(x.type))e.push(x.name+': only JPG, PNG or WebP allowed');else if(x.size>CFG.maxMB*1048576)e.push(x.name+': larger than '+CFG.maxMB+' MB');else S.files.push({f:x,url:URL.createObjectURL(x),to:''})});S.err=e.join(' · ');render()}
+function msg(ref){const t=tot(),f=S.f;let m=`STUDIO POSTER — NEW ORDER\n\nOrder Reference: ${ref}\n\nCUSTOMER DETAILS\nName: ${f.name}\nContact: ${f.phone}\nWhatsApp: ${f.wa||f.phone}\n${f.mail?'Email: '+f.mail+'\n':''}\nDELIVERY ADDRESS\n${addr()}\nState: ${f.state}\nPIN Code: ${f.pin}\nDelivery Instructions: ${f.land||'—'}\n\nORDER ITEMS\n`;
+S.items.forEach((i,k)=>{const p=price(i);m+=`${k+1}. Product: ${CFG.cat[i.cat].label}\n   Size: ${i.size==='Custom size'?`Custom ${i.w} × ${i.h} ${i.u}`:i.size}\n   Quantity: ${i.qty}\n   Unit Price: ${p===null?'Custom quotation':fmt(p)}\n   Subtotal: ${p===null?'To be confirmed':fmt(p*i.qty)}\n`});
+m+=`\nIMAGE DETAILS\n${S.files.length?S.files.map(x=>`- ${x.f.name} (${x.to===''?'design reference':'item '+(+x.to+1)}) — I will attach this in WhatsApp`).join('\n'):'No images listed'}\n\nCUSTOMIZATION\n${notes()||'—'}\n\nPRICE SUMMARY\nProducts: ${fmt(t.sub)}${t.pend?' + custom-size items (quotation pending)':''}\nDelivery: ${fmt(t.d)}\nTotal: ${t.total!==null?fmt(t.total):'Pending quotation'}\n\nPAYMENT\nPrepaid only — COD unavailable.\nPayment status: Pending confirmation.`;return m}
+document.addEventListener('input',e=>{const n=e.target.dataset?.f;if(n){S.f[n]=e.target.value;if(n==='state')sum()}
+const p=S.pick,id=e.target.id;if(id==='pq')p.qty=Math.max(1,Math.min(CFG.maxQty,+e.target.value||1));if(id==='pw')p.w=e.target.value;if(id==='ph')p.h=e.target.value;if(id==='pu')p.u=e.target.value;
+if(id==='psz'){p.size=e.target.value;render()}if(id==='ck')S.ok=e.target.checked;if(e.target.classList.contains('asg'))S.files[e.target.dataset.k].to=e.target.value});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');const dz=e.target.closest('#dz');if(dz){$('#fi').click();return}if(!b)return;const a=b.dataset.a,k=+b.dataset.k,p=S.pick;S.err='';
+if(a==='pick'){S.pick={...p,cat:b.dataset.c,size:b.dataset.s};S.step=0;render();$('#order').scrollIntoView();return}
+if(a==='cat'){p.cat=b.dataset.c;p.size=CFG.cat[p.cat].sizes[0][0]}
+if(a==='add'){S.items.push({cat:p.cat,size:p.size,qty:p.qty,w:p.w,h:p.h,u:p.u})}
+if(a==='rm')S.items.splice(k,1);if(a==='iq')S.items[k].qty=Math.min(CFG.maxQty,S.items[k].qty+1);if(a==='dq')S.items[k].qty=Math.max(1,S.items[k].qty-1);
+if(a==='rf')S.files.splice(k,1);if(a==='go')S.step=k;if(a==='back')S.step--;
+if(a==='next'){const r=valid(S.step);if(r)S.err=r;else{S.step++;$('#order').scrollIntoView()}}
+if(a==='wa'){const r=valid(0)||valid(1)||(S.ok?'':'Please tick the confirmation checkbox.');if(r)S.err=r;else{const ref='SP-'+Date.now().toString(36).toUpperCase();S.sent=true;open('https://wa.me/'+CFG.wa+'?text='+encodeURIComponent(msg(ref)),'_blank','noopener')}}
+render()});
+document.addEventListener('change',e=>{if(e.target.id==='fi')addFiles(e.target.files)});
+document.addEventListener('dragover',e=>{if(e.target.closest('#dz')){e.preventDefault();$('#dz').classList.add('d')}});
+document.addEventListener('dragleave',e=>{if(e.target.closest('#dz'))$('#dz').classList.remove('d')});
+document.addEventListener('drop',e=>{if(e.target.closest('#dz')){e.preventDefault();addFiles(e.dataTransfer.files)}});
+render();
+</script></body></html>
